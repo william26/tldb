@@ -1,0 +1,3 @@
+CREATE USER todolist;
+CREATE DATABASE todolist;
+GRANT ALL PRIVILEGES ON DATABASE todolist TO todolist;
