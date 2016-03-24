@@ -14,3 +14,13 @@ run:
 		-e POSTGRES_USER=todolist \
 		-e POSTGRES_DB=todolist \
 		willjcksn/tldb
+
+rundev:
+	make stop;
+	docker run -ti --name tldb \
+		--net=dbnetwork \
+		-p 5432:5432 \
+		-e POSTGRES_PASSWORD=somepassword \
+		-e POSTGRES_USER=todolist \
+		-e POSTGRES_DB=todolist \
+		willjcksn/tldb
